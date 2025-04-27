@@ -1,4 +1,4 @@
-.main-box{
+.main_box{
     bottom: 0;
     top: 0;
     right: 0;
@@ -7,9 +7,10 @@
     flex-direction: column;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
-.cookie-warn{
+.cookie_warn{
     width: 100%;
     height: auto;
     background-color:#E6F0FF;
@@ -21,7 +22,7 @@
     margin: 0 auto;
 }
 
-.cookie-warn-buttons-box{
+.cookie_warn_buttons_box{
     height: auto;
     background-color: none;
     width: auto;
@@ -34,40 +35,40 @@
 }
 
 @media(max-width: 660px){
-    .cookie-warn{
+    .cookie_warn{
         flex-wrap: wrap;
         align-items: center;
     }
-    .cookie-warn-buttons-box{
+    .cookie_warn_buttons_box{
         margin-bottom: 0;
         margin-top: 0;
     }
 }
 
 @media(max-width: 320px){
-        .cookie-warn-buttons-box{
+        .cookie_warn_buttons_box{
             flex-wrap: wrap;
             gap: 5px;
         }
 }
 
-.warn-text{
+.warn_text{
     font-size: clamp(10px, 1vw, 14px);
     width: auto;
     text-align: left;
 }
 
-.warn-text a{
+.warn_text a{
     color: #0052cc;
     text-decoration: underline;
     cursor: pointer;
 }
 
-.warn-text:visited{
+.warn_text:visited{
     color: #490097;
 }
 
-.warn-buttons{
+.warn_buttons{
     font-size: clamp(10px, 0.9vw, 0.9rem);
     font-weight: 550;
     width: auto;
@@ -81,27 +82,27 @@
     text-overflow: ellipsis;
     border: none;
     border-radius: 3px;
-    background-color: #959eb559;
+    background-color: #959eb530;
     padding: 6px;
     box-sizing: border-box;
 }
 
-.warn-buttons:first-child{
+.warn_buttons:first-child{
     margin-left: 15px;
     margin-right: 7px;
     background: none;
 }
 
-.warn-buttons:last-child{
+.warn_buttons:last-child{
     margin-right: 15px;
     margin-left: 7px;
 }
 
-.warn-buttons:first-child:hover{
+.warn_buttons:first-child:hover{
     background-color: #959eb559;
 }
 
-.warn-buttons:hover{
+.warn_buttons:hover{
     background-color: #959eb57c;
 }
 
@@ -109,7 +110,41 @@
     width: 100%;
     height: auto;
     background-color: #0166ff;
-    color: white;
-    margin: 0 auto;
+    color: #99badd;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
 }
 
+.header img{
+    width: clamp(27px, 1vw, 40px);
+    height: auto;
+    margin-right: 10px;
+    margin-left: 40px;
+}
+
+.content{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: #959eb57c;
+    flex-direction: row;
+}
+
+.choise{
+    height: 100%;
+    background-color: #0166ff;
+    width: 50%;
+    margin: 0;
+}
+
+.trello_screenshot{
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    background-color: #490097;
+}

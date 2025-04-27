@@ -285,9 +285,9 @@ function Pricingpage() {
                           <ul>
                             {plan.features.map((feature, idx) => (
                               <li key={idx}>
-                                <span className={app.checkmark}>✔</span>
+                                <div className={app.checkmark}>✔</div>
                                 {feature.name}
-                                {feature.cs && <span className={app.coming_soon}> COMING SOON</span>}
+                                {feature.cs && <div className={app.coming_soon}> COMING SOON</div>}
                               </li>
                             ))}
                           </ul>
