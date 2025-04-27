@@ -1,0 +1,55 @@
+# Зависимости
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Сборка и бинарники
+dist/
+build/
+.next/
+out/
+coverage/
+
+# Локальные файлы и секреты
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.key
+*.pem
+
+# Логи
+*.log
+logs/
+*.log.*
+
+# Временные файлы и кэш
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.swp
+*.cache
+
+# Редакторы и IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Тестовые и отладочные файлы
+.nyc_output/
+.jest/
+.mocha/
+
+# Видео-файлы (добавь это!)
+*.mp4
+*.svg
+*.png
+*.mov
+*.avi
+
+# Локальные базы данных (для бэка)
+*.sqlite
+*.db

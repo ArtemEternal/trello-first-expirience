@@ -1,0 +1,59 @@
+# Зависимости Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+
+# Сборка и бинарники
+dist/
+build/
+.next/ # Для Next.js
+out/
+coverage/ # Для тестов
+
+# Локальные файлы и секреты
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.key
+*.pem
+
+# Логи
+*.log
+logs/
+*.log.*
+
+# Временные файлы и кэш
+.DS_Store # Для Mac
+Thumbs.db # Для Windows
+*.tmp
+*.bak
+*.swp
+*.cache
+
+# Редакторы и IDE
+.vscode/ # Настройки VS Code
+.idea/ # Настройки WebStorm
+*.sublime-project
+*.sublime-workspace
+
+# Тестовые и отладочные файлы
+.nyc_output/
+.jest/
+.mocha/
+
+# Докер и CI/CD
+.dockerignore
+.gitlab-ci.yml # Если не используешь GitLab CI
+
+# Дополнительно (для фронта)
+public/build/
+public/dist/
+*.map # Source maps, если не нужны
+
+# Локальные базы данных (если есть)
+*.sqlite
+*.db
+
