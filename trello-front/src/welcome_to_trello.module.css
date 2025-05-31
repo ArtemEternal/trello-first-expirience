@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    height: 100vh;
 }
 
 .cookie_warn{
@@ -137,14 +138,182 @@
 
 .choise{
     height: 100%;
-    background-color: #0166ff;
-    width: 50%;
+    background-color: white;
+    width: auto;
     margin: 0;
+    padding: 0 10% 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .trello_screenshot{
-    width: 50%;
+    width: auto;
     height: 100%;
+    background-color: rgb(255, 249, 249);
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+}
+
+.trello_screenshot img{
+    max-width: 90%;
+    width: 67%;
+    height: auto;
+    display: block;
+}
+
+.choise h1{
+    text-align: start;
+    background-color: none;
+    width: 130%;
+    font-weight: 400;
+    font-size: clamp(18px, 2.2vw, 40px);
+    transform: translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choise ul{
+    list-style-type: none;
+    background-color: none;
+    margin-bottom: 30px;
+    padding: 0;
+    width: 130%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-20px);
+    margin: 0 0 30px 0;
+}
+
+.choise ul li{
+    width: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.choise ul button{
+    width: 100%;
+
+    flex: 1;
+    min-height: 5.5em;
+    font-size: clamp(10px, 1vw, 12px);
+    padding: 0 10px 0 10px;
+
+    white-space: normal;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 3px;
+    background: none;
+    border: 2px solid #9999998a;
+    border-radius: 8px;
+    text-align: start;
+    cursor: pointer;
+}
+
+.choise ul button:hover{
+ background-color: #9999993e;
+}
+
+.button_box{
+    transform: translateY(-20px);
+    width: 130%;
+    background-color: none;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    height: auto;
+}
+
+.button_box button{
+    background: none;
+    border: #9999998a;
+    border-radius: 5px;
+    padding: 0.6em;
+    font-weight: 600;
+}
+
+.button_box button:first-child{
+    cursor: no-drop;
+    background-color: #99999914;
+    color: #9999998a;
+}
+
+.button_box button:last-child{
+    cursor: pointer;
+}
+
+.button_box button:last-child:hover{
+    background-color: #9999993e;
+}
+
+.button_box .blueback{
+    background-color: #0166ff !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+}
+
+.link{
+    text-decoration: none;
+    color: #000;
+    text-decoration-line: none;
     margin: 0;
-    background-color: #490097;
+}
+
+.choise img{
+    width: clamp(10px, 2vw, 20px); 
+    height: auto;
+    margin-right: 7px;
+    margin-left: 5px;
+}
+
+.trellogo{
+    background-color: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    gap: 10px;
+    margin-bottom: -10px !important;
+}
+
+.trellogo img{
+    width: clamp(12px, 3vw, 25px); 
+
+}
+
+.trellogo h1{
+    font-size: clamp(18px, 2.2vw, 40px);   
+    color: #333d49;
+}
+
+.ch_but.active{
+    background-color: #0052cc17 !important;
+    border: 2px solid #0267ff;
+}
+
+.rec{
+    margin: -40px -20px -20px -20px !important;
+    background-color: #d0ffe0;
+    color: #1A3C34;
+    padding: 3px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: clamp(10px, 0.7vw, 20px); 
+    font-weight: 700;
+    text-transform: uppercase;
 }

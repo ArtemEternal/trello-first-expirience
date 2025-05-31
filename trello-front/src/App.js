@@ -7,6 +7,8 @@ import BuisnessCard from './buisnesscard.js';
 import HomePage from './home.js';
 import { SignUpPage } from './signup.js';
 import { WelcomeToTrello } from './welcome-to-trello.js';
+import { WelcomeToTrelloSecond } from './welcome-to-trello-2.js';
+import { WorkPage } from './personal-account.js';
 
 function SplashScreen({ onFinish }) {
 
@@ -64,6 +66,8 @@ function App() {
             <Route path='/buisnesscard' element={<BuisnessCard/>}/>
             <Route path='/signup' element={<SignUpPage/>}/>
             <Route path='/welcome-to-trello' element={<WelcomeToTrello/>}/>
+            <Route path='/welcome-to-trello-2' element={<WelcomeToTrelloSecond/>}/>
+            <Route path='/workpage' element={<WorkPage/>}/>
           </Routes>
           {/*<Footer/>*/}
         </div>
