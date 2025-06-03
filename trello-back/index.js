@@ -4,7 +4,8 @@ const port = 3001;
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const crypto = require("node:crypto");
-
+const cors = require('cors');
+const db = require('./db');
 
 app.use(
     require("cors")({
@@ -15,6 +16,8 @@ app.use(
   
   app.use(bodyParser.json());
   app.use(cookieParser());
+  app.use(cors());
+  app.use(express.json());
 
 
   app.get("/", (req, res) => {

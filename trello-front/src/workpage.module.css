@@ -392,7 +392,6 @@
     gap: 10px;
     padding: 10px; 
     box-sizing: border-box;
-    overflow-y: auto;
 }
 
 .card_my{
@@ -419,7 +418,6 @@
 }
 
 .set_c{
-    background: inherit;
     border: none;
   display: flex;
   justify-content: center; 
@@ -454,8 +452,10 @@
     position: relative;
     display: flex;
     justify-content: center;
-    
     overflow-y: auto;
+
+    box-sizing: border-box;
+    padding: 15px 30px 65px 30px;
 }
 
 .panel{
@@ -515,19 +515,212 @@
   border-radius: 5px;
 }
 
+
+
 .mainblock{
     position: relative;
     bottom: 0;
     top: 0;
     right: 0;
     left: 0;
+    max-width: 100%;
     width: 100%;
+    min-width: 25%;
+    margin: 0;
+    border-radius: 20px;
     height: auto;
     align-items: flex-start; 
     gap: 10px;
-    background: none;
     display: flex;
     flex-direction: row;
+    border: 1px solid #989898;
+    scroll-margin-bottom: 10px;
+    flex-shrink: 0;
+    
+
+    overflow-x: auto;
+}
+
+.mainblock::-webkit-scrollbar {
+    display: none;
+}
+
+.inboxblock{
+    position: relative;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    max-width: 35%;
+    width: 100%;
+    min-width: none;
+    margin: 0;
+    border-radius: 20px;
+    height: auto;
+    background: #004cff;
+    border: 1px solid #989898;
+}
+
+.planerblock{
+    position: relative;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    max-width: 45%;
+    width: 100%;
+    min-width: 10%;
+    margin: 0;
+    border-radius: 20px;
+    height: auto;
+    background: #ff00bb;
+    border: 1px solid #989898;
+        
+    flex-shrink: 0;
+}
+
+.splitter{
+    height: auto;
+    position: relative;
+    width: 10px;
+    background: inherit;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    cursor: e-resize;
+}
+
+.splitter div{
+    position: absolute;
+    width: calc(3px / 2);
+    background: #bebebe;
+    min-height: 40px;
+    border-radius: 10px;
+}
+
+.splitter:hover div{
+    background: #004cff;
+    height: 98%;
+    border-radius: 0
+}
+
+.inbox_butt{
+    background: #0073ff72 !important;
+}
+
+.planner_butt{
+    background: #0073ff72 !important;
+}
+
+.main_butt{
+    background: #0073ff72 !important;
+}
+
+.add_button{
+    box-sizing: border-box;
+    padding:  0.8em 2.5em 0.8em 0.8em;
+    font-weight: 550;
+    font-size: clamp(10px, 1.8vh, 17px);
+    color: #000000a3;
+    background: #c7c7c7;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.add_button:hover{
+    background: #737373;
+}
+
+.addingTBox{
+    box-sizing: border-box;
+    padding:  0.8em;
+    font-weight: 550;
+    font-size: clamp(10px, 1.8vh, 17px);
+    background: #20232A;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 7px;
+    align-items: flex-start;
+    flex-shrink: 0;
+    height: auto;
+    max-height: 30%;
+    width: clamp(250px, 10vw, 400px);
+}
+
+.addingTBox textarea{
+    border: 3px solid transparent;
+    border-radius: 5px;
+    min-height: 15px;
+    padding: 0.5em;
+    width: 100%;
+    resize: none; 
+    box-sizing: border-box;
+    text-align: left;
+    vertical-align: top;
+    field-sizing: content;
+    white-space: normal;
+    background: #3b3d44;
+    caret-color: #f5f5f5;
+    color: #d8d8d8;
+}
+
+.addingTBox button{
+    color: #332e62;
+    box-sizing: border-box;
+    padding: 0.8em 0.3em 0.8em 0.3em;
+    text-align: center;
+    font-weight: 550;
+    font-size: clamp(10px, 1.7vh, 17px);
+    height: 100%;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+    background: #0073ff;
+    flex: 4;
+}
+
+.addingTBox button:hover{
+    background: #00c6ff;
+}
+
+.addingTBox button:last-child:hover{
+    background: #797e8aa5;
+}
+
+.addingTBox button:last-child{
+    box-sizing: border-box;
+    padding: 0.3em;
+    font-weight: 550;
+    font-size: clamp(10px, 10vh, 17px);
+    color: silver;
+    background: inherit;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+
+    flex: 1;
+}
+
+
+
+.two_but2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding-right: 30%;
+    background: inherit;
+    gap: 5px;
 }
 
 .current_tables{
@@ -536,7 +729,7 @@
     box-sizing: border-box;
     min-height: 100px;
     max-height: 80%;
-    width: 20%;
+    width: clamp(250px, 10vw, 400px);
     background: #20232A;
     border-radius: 10px;
     margin: 10px;
@@ -546,6 +739,8 @@
     gap: 10px;
     overflow-y: auto;
     transition: height 0.3s ease;
+
+    flex-shrink: 0;
 }
 
 .current_tables::-webkit-scrollbar {
@@ -651,6 +846,7 @@
     text-align: left;
     vertical-align: top;
     field-sizing: content;
+    white-space: normal;
     background: #3b3d44;
     caret-color: #f5f5f5;
     color: #d8d8d8;
@@ -712,7 +908,196 @@ textarea::placeholder {
     text-align: center;
 }
 
-
 .two_but button:last-child:hover{
     background: #797e8a67;
+}
+
+.creating_card_block{
+    background: #3a3d48;
+    width: 330px; 
+    height: 90vh; 
+    position: relative;
+    z-index: 999; 
+    bottom: 108%; 
+    border-radius: 5px; 
+    box-sizing: border-box;
+}
+
+.header3{
+    position: sticky;
+    top: 0;
+    min-height: 40px;
+    width: 100%;
+    background: inherit;
+    text-align: start;
+    color: #c7c7c7;
+    box-sizing: border-box;
+    font-weight: 550;
+    text-align: center;
+    font-size: clamp(10px, 2.2vh, 17px);
+    padding: 10px;   
+    border-radius: 5px 5px 0 0;
+}
+
+.header3 button{
+    right: 10px;
+    position: absolute;
+    background: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    border: none;
+    color: #c7c7c7;
+}
+
+.header3 button:hover{
+    background: #797e8a76;
+}
+
+.imgimg{
+    border-radius: 8px;
+    height: 20%;
+    width: 70%;
+    left: 15%;
+    position: absolute;
+    margin-top: 20px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.divvv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    box-sizing: border-box;
+    margin-top: 0;
+    padding: 0 5px 5px 5px;
+}
+
+.divvv div{
+    background: #bebebe;
+    width: 30%;
+    height: 90%;
+    border-radius: 4px;
+}
+
+.divvv div:nth-child(2){
+    height: 50%;
+}
+
+.imgimg header{
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    background: transparent;
+    height: 15%;
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgimg header img{
+    background: none;
+    height: 12px;
+    width: 12px;
+}
+
+.фон{
+    width: 100%;
+    height: 15%;
+    background: inherit;
+    position: absolute;
+    margin-top: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    white-space: normal;
+    field-sizing: content;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.picture{
+    width: 23%;
+    height: 50%;
+    border-radius: 8px;
+}
+
+.gradient{
+    width: 15%;
+    height: 40%;
+    border-radius: 8px;
+}
+
+.inputss{
+    background: inherit;
+    width: 100%;
+    position: relative;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+}
+
+.inputss h1{
+    font-size: clamp(10px, 2vh, 17px);
+    color: #c7c7c7;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+.inputss input{
+    width: 98%;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    border: 2px solid #bebebe;
+}
+
+.inputss input:focus{
+    border: 2px solid #0072ff;
+}
+
+.setting_but{
+    box-sizing: border-box;
+    padding: 0.5em;
+    font-size: clamp(10px, 2vh, 17px);
+    color: #3a3d48;
+    background: #0072ff;
+    min-height: 30px;
+    left: 20%;
+    right: 20%;
+    top: 60%;
+    position: absolute;
+    border: none;
+    border-radius: 4px;
+}
+
+.setting_but:hover{
+    background: #004496;
+}
+
+.inactive{
+    display: none;
 }

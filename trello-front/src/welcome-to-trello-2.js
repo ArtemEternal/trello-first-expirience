@@ -98,10 +98,6 @@ export function WelcomeToTrelloSecond() {
             setCurrentTable(tableId);
             e.dataTransfer.setData("text/plain", card.id);
         }
-
-        const handleDragLeave = (e) => {
-
-        }
         
         const handleDragEnd = (e) => {
             setCurrentCard(null); 
